@@ -16,12 +16,17 @@
         <div class="mosque-silhouette"></div>
         <div class="stars"></div>
         <div class="opening-content">
-          
-            
             <div class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
             <p class="opening-text">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
             <div class="geometric-divider"></div>
-            <p class="invitation-text">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami:</p>
+            <p class="invitation-text">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang <span id="guest-name-inline">Bapak/Ibu/Saudara/i</span> untuk menghadiri acara pernikahan kami:</p>
+            
+            <!-- Guest Name Display -->
+            <div class="guest-name-container" id="guest-name-container">
+                <p class="kepada-text">Kepada Yth.</p>
+                <h3 class="guest-name" id="guest-name">Tamu Undangan</h3>
+            </div>
+            
             <button class="open-invitation-btn" onclick="openInvitation()">
                 <i class="fas fa-envelope-open"></i>
                 <span>Buka Undangan</span>
@@ -352,7 +357,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>Created with <i class="fas fa-heart"></i> for Ari & Vinda</p>
+            <p>Made with <i class="fas fa-heart"></i>Ari & Vinda</p>
             <p class="copyright">© 2026 Wedding Invitation</p>
         </footer>
     </main>
