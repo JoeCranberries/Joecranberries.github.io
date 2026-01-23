@@ -8,6 +8,29 @@ const musicIcon = document.getElementById('music-icon');
 // ===== Global Variables =====
 let isPlaying = false;
 
+// ===== Get Guest Name from URL =====
+function getGuestName() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const guestName = urlParams.get('to');
+    
+    const guestNameElement = document.getElementById('guest-name');
+    const guestNameInline = document.getElementById('guest-name-inline');
+    
+    if (guestName) {
+        const decodedName = decodeURIComponent(guestName);
+        guestNameElement.textContent = decodedName;
+        guestNameInline.textContent = decodedName;
+    } else {
+        guestNameElement.textContent = 'Tamu Undangan';
+        guestNameInline.textContent = 'Bapak/Ibu/Saudara/i';
+    }
+}
+
+// ===== Initialize on Page Load =====
+window.addEventListener('DOMContentLoaded', () => {
+    getGuestName();
+});
+
 // ===== Open Invitation =====
 function openInvitation() {
     // Hide opening section with fade out
